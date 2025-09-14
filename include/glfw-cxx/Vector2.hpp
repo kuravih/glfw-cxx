@@ -70,8 +70,8 @@ namespace glfw
             y /= right;
         }
 
-        Vector2<T>() : x{0}, y{0} {}
-        Vector2<T>(T x_, T y_) : x{x_}, y{y_} {}
+        Vector2() : x{0}, y{0} {}
+        Vector2(T x_, T y_) : x{x_}, y{y_} {}
     };
 }
 

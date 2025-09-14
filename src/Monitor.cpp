@@ -6,6 +6,7 @@ namespace glfw
     const Monitor::Function Monitor::DefaultFunction =
         [](Monitor monitor, MonitorConfigChangeEvents event)
     {
+        (void)event; // Suppress unused parameter warning
         changed = true;
         ChangedMonitors.push_back(monitor);
     };
