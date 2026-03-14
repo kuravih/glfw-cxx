@@ -98,24 +98,28 @@ namespace glfw
     void Window::Create(int width, int height, const std::string &title, const Monitor &monitor, const Window &share)
     {
         m_window = glfwCreateWindow(width, height, title.c_str(), monitor.GetRawPointerData(), share.GetRawPointerData());
+        m_destroy = true;
         PrepareCallbacks();
     }
 
     void Window::Create(int width, int height, const std::string &title, const Monitor &monitor)
     {
         m_window = glfwCreateWindow(width, height, title.c_str(), monitor.GetRawPointerData(), NULL);
+        m_destroy = true;
         PrepareCallbacks();
     }
 
     void Window::Create(int width, int height, const std::string &title, const Window &share)
     {
         m_window = glfwCreateWindow(width, height, title.c_str(), NULL, share.GetRawPointerData());
+        m_destroy = true;
         PrepareCallbacks();
     }
 
     void Window::Create(int width, int height, const std::string &title)
     {
         m_window = glfwCreateWindow(width, height, title.c_str(), NULL, NULL);
+        m_destroy = true;
         PrepareCallbacks();
     }
 
@@ -299,26 +303,22 @@ namespace glfw
 
     Window::Window(int width, int height, const std::string &title, const Monitor &monitor, const Window &share)
     {
-        m_window = glfwCreateWindow(width, height, title.c_str(), monitor.GetRawPointerData(), share.GetRawPointerData());
-        m_destroy = true;
+        Create(width, height, title, monitor, share);
     }
 
     Window::Window(int width, int height, const std::string &title, const Monitor &monitor)
     {
-        m_window = glfwCreateWindow(width, height, title.c_str(), monitor.GetRawPointerData(), NULL);
-        m_destroy = true;
+        Create(width, height, title, monitor);
     }
 
     Window::Window(int width, int height, const std::string &title, const Window &share)
     {
-        m_window = glfwCreateWindow(width, height, title.c_str(), NULL, share.GetRawPointerData());
-        m_destroy = true;
+        Create(width, height, title, share);
     }
 
     Window::Window(int width, int height, const std::string &title)
     {
-        m_window = glfwCreateWindow(width, height, title.c_str(), NULL, NULL);
-        m_destroy = true;
+        Create(width, height, title);
     }
 
     Window::Window(GLFWwindow *window)
@@ -328,11 +328,8 @@ namespace glfw
         PrepareCallbacks();
     }
 
-    Window::Window()
+    Window::Window() : m_window{nullptr}, m_destroy{true}
     {
-        m_destroy = true;
-        // using Window::LambdaPositionFunctionWrapper;
-        // using Window::PositionFunctionPointerWrapper;
     }
 
     Window::~Window()
