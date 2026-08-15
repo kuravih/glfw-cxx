@@ -1,6 +1,3 @@
-#ifndef _GLFW_CXX_VECTOR2_H_
-#define _GLFW_CXX_VECTOR2_H_
-
 #pragma once
 
 namespace glfw
@@ -74,5 +71,3 @@ namespace glfw
         Vector2(T x_, T y_) : x{x_}, y{y_} {}
     };
 }
-
-#endif // _GLFW_CXX_VECTOR2_H_

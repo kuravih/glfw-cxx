@@ -1,6 +1,3 @@
-#ifndef _GLFW_CXX_INIT_H_
-#define _GLFW_CXX_INIT_H_
-
 #pragma once
 
 namespace glfw
@@ -17,5 +14,3 @@ namespace glfw
      */
     bool GetWillTerminateOnExit();
 }
-
-#endif // _GLFW_CXX_INIT_H_

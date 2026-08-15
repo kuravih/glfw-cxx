@@ -1,6 +1,3 @@
-#ifndef _GLFW_CXX_VERSION_H_
-#define _GLFW_CXX_VERSION_H_
-
 #pragma once
 #include <GLFW/glfw3.h>
 #include <string>
@@ -18,5 +15,3 @@ namespace glfw
         std::string GetString();
     }
 }
-
-#endif // _GLFW_CXX_VERSION_H_

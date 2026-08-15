@@ -1,6 +1,3 @@
-#ifndef _GLFW_CXX_TIME_H_
-#define _GLFW_CXX_TIME_H_
-
 #pragma once
 #include <GLFW/glfw3.h>
 
@@ -22,5 +19,3 @@ namespace glfw
         static void Set(double time);
     };
 }
-
-#endif // _GLFW_CXX_TIME_H_

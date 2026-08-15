@@ -1,6 +1,3 @@
-#ifndef _GLFW_CXX_EVENT_H_
-#define _GLFW_CXX_EVENT_H_
-
 #pragma once
 #include "Vector2.hpp"
 #include "Input.hpp"
@@ -139,5 +136,3 @@ namespace glfw
         Event() {}
     };
 }
-
-#endif // _GLFW_CXX_EVENT_H_

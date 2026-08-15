@@ -4,6 +4,7 @@
 
 namespace glfw
 {
+    bool DebugForceX11 = (glfwInitHint(GLFW_PLATFORM, GLFW_PLATFORM_X11), true);
     bool IsActive = glfwInit();
     bool WillTerminateOnExit = atexit(glfwTerminate);
 

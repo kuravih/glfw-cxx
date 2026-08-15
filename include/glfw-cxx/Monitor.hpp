@@ -1,6 +1,3 @@
-#ifndef _GLFW_CXX_MONITOR_H_
-#define _GLFW_CXX_MONITOR_H_
-
 #pragma once
 #include <GLFW/glfw3.h>
 #include <list>
@@ -132,5 +129,3 @@ namespace glfw
         Monitor(GLFWmonitor *monitor);
     };
 }
-
-#endif // _GLFW_CXX_MONITOR_H_

@@ -1,6 +1,3 @@
-#ifndef _GLFW_CXX_CONTEXT_H_
-#define _GLFW_CXX_CONTEXT_H_
-
 /*! \file Context.hpp
  * \brief The Context header file
  *
@@ -141,5 +138,3 @@ namespace glfw
     glproc GetProcAddress(std::string procname);
   }
 }
-
-#endif // _GLFW_CXX_CONTEXT_H_

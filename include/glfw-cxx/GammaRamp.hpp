@@ -1,6 +1,3 @@
-#ifndef _GLFW_CXX_GAMMARAMP_H_
-#define _GLFW_CXX_GAMMARAMP_H_
-
 #pragma once
 #include <GLFW/glfw3.h>
 
@@ -59,5 +56,3 @@ namespace glfw
         GammaRamp();
     };
 }
-
-#endif // _GLFW_CXX_GAMMARAMP_H_

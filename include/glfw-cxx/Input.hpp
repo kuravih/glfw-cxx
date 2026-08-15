@@ -1,6 +1,3 @@
-#ifndef _GLFW_CXX_INPUT_H_
-#define _GLFW_CXX_INPUT_H_
-
 #pragma once
 
 namespace glfw
@@ -199,5 +196,3 @@ namespace glfw
      */
     using ButtonAction = KeyAction;
 }
-
-#endif // _GLFW_CXX_INPUT_H_

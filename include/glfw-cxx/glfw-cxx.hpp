@@ -1,3 +1,4 @@
+#pragma once
 #include <include/Version.hpp>
 #include <include/Window.hpp>
 #include <include/Monitor.hpp>

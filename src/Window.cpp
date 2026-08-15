@@ -285,6 +285,9 @@ namespace glfw
 
     void Window::PrepareCallbacks()
     {
+        if (m_window == nullptr)
+            return;
+
         glfwSetWindowPosCallback(m_window, CurrentPositionFunctionPointerRaw);
         glfwSetWindowSizeCallback(m_window, CurrentSizeFunctionPointerRaw);
         glfwSetWindowCloseCallback(m_window, CurrentCloseFunctionPointerRaw);
@@ -325,7 +328,6 @@ namespace glfw
     {
         m_window = window;
         m_destroy = false;
-        PrepareCallbacks();
     }
 
     Window::Window() : m_window{nullptr}, m_destroy{true}
